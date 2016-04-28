@@ -77,7 +77,7 @@ class hitung{
                     b = in.nextInt();
                     System.out.println("hasil perhitungan:"+pembagian.pembagian(a, b ));
                     break;
-            case 5: System.out.println("=PENYEDERHANAAN=");
+            case 5: System.out.println("PROGRAM PENYEDERHANAAN");
                     hitung sederhana = new hitung();
                     System.out.print("Masukkan Pembilang : ");
                     a = in.nextInt();
@@ -85,12 +85,11 @@ class hitung{
                     b = in.nextInt();
                     sederhana.sederhana(a, b );
                     break;
-            case 0: System.out.println("Program diberhentikan");
+            case 6: System.out.println("Program diberhentikan");
                     break;
             default: System.out.println("Pilihan Tidak Tersedia!");
         }
-       }while(pilih!=0);
+       }while(pilih!=6);
     }    
     }
-    
-}
+  

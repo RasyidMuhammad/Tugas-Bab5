@@ -1,8 +1,7 @@
 package tugas.bab5;
 import java.util.Scanner;
-
 class Jaket {
-    private static int jaketA = 100000, jaketB = 125000, jaketC = 175000;
+    private static final int jaketA = 100000, jaketB = 125000, jaketC = 175000;
     private static int total, totalA, totalB, totalC;
     public static void setJaketA(int jaketA) {
         if (jaketA >= 100) {
@@ -42,19 +41,29 @@ class Jaket {
     }
 }
 
-
-
-
-
-
-
 public class TugasBab5 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+   public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+        int jaketA, jaketB, jaketC;
+        System.out.println("1. Jaket A : Rp 100.000/pcs    >100 : Rp 95.000/pcs");
+        System.out.println("2. Jaket B : Rp 125.000/pcs    >100 : Rp 120.000/pcs");
+        System.out.println("3. Jaket C : Rp 175.000/pcs    >100 : Rp 160.000/pcs");
+        System.out.println("Masukkan jumlah jaket yang ingin dipesan");
+        System.out.print("Jaket A = ");
+        jaketA = in.nextInt();
+        Jaket.setJaketA(jaketA);
+        System.out.print("Jaket B = ");
+        jaketB = in.nextInt();
+        Jaket.setJaketB(jaketB);
+        System.out.print("Jaket C = ");
+        jaketC = in.nextInt();
+        Jaket.setJaketC(jaketC);
+        System.out.println("Total harga " + jaketA + " jaket A = " + Jaket.getTotalA());
+        System.out.println("Total harga " + jaketB + " jaket B = " + Jaket.getTotalB());
+        System.out.println("Total harga " + jaketC + " jaket C = " + Jaket.getTotalC());
+        System.out.println("Total seluruh jaket "+Jaket.getTotal());
     }
-    
 }
+
+   
+  
